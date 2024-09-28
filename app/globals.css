@@ -1,27 +1,112 @@
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+/* Roboto Slab */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Roboto Mono */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+/* Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Unica One */
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Noto Sans */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Nunito */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer utilities {
+	.flex-center-center {
+		@apply flex justify-center items-center;
+	}
+	.flex-start-center {
+		@apply flex justify-start items-center;
+	}
+	.flex-end-center {
+		@apply flex justify-end items-center;
+	}
+	.flex-center-start {
+		@apply flex justify-center items-start;
+	}
+	.flex-center-end {
+		@apply flex justify-center items-end;
+	}
+
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+	height: 100%;
+	padding: 0.01px;
+
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	padding: 0.01px;
+
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* #root {
+	height: 100%;
+	padding: 0.01px;
+
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-weight: 400;
+	font-size: 16px;
+	color: white;
+
+	/* font-family: system-ui; */
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+@layer base {
+	:root {
+		--radius: 0.5rem;
+	}
 }
