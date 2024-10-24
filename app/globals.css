@@ -45,8 +45,6 @@
 	.flex-center-end {
 		@apply flex justify-center items-end;
 	}
-
-
 }
 
 html {
@@ -99,6 +97,17 @@ body {
 	/* font-family: system-ui; */
 }
 
+.glassmorphism {
+	background: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+.glassmorphism2 {
+	background: rgba(18, 17, 17, 0.25);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
@@ -109,4 +118,87 @@ body {
 	:root {
 		--radius: 0.5rem;
 	}
+}
+
+/* clerk */
+
+/* a tags use phone tages */
+.cl-formFieldAction {
+	color: white;
+}
+
+.cl-formFieldAction:hover {
+	color: rgb(184, 184, 184);
+}
+
+/*  a tags - sign in - sign up footer link */
+.cl-footerActionLink {
+	color: white;
+}
+
+.cl-footerActionLink:hover {
+	color: rgb(184, 184, 184);
+}
+
+/* reset you password button  */
+.cl-alternativeMethodsBlockButton {
+	color: white;
+}
+
+/* baclLink button same page with reset your password button */
+.cl-backLink {
+	color: white;
+	font-weight: 600;
+}
+
+/* update password button after sign in setting page */
+.cl-profileSectionPrimaryButton {
+	color: white;
+}
+
+.cl-profileSectionPrimaryButton:hover {
+	color: white;
+}
+
+/* didnt recieved the code - reset password form  */
+.cl-formResendCodeLink {
+	color: white;
+}
+
+/* save buttons color settings after signed-in */
+.cl-formButtonPrimary {
+	color: white;
+}
+
+/* cancel buttons color after sign in */
+.cl-formButtonReset {
+	color: white;
+}
+.cl-formButtonReset:hover {
+	color: white;
+}
+
+/** Classes for the displayed toast **/
+.Toastify__toast {
+	background: black !important;
+	border: 1px solid rgb(65, 65, 65);
+	width: 20rem !important;
+
+	text-align: center;
+}
+
+.Toastify__toast-theme--dark {
+	background: black !important;
+	border: 1px solid rgb(65, 65, 65);
+	width: 20rem !important;
+
+	text-align: center;
+}
+
+.Toastify__toast--default {
+	background: black !important;
+	border: 1px solid rgb(65, 65, 65);
+	width: 20rem !important;
+
+	text-align: center;
 }

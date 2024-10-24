@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { dark } from "@clerk/themes";
+
+import { ToastContainer, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -25,7 +31,32 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<ClerkProvider
+				appearance={{
+					baseTheme: dark,
+					variables: {
+						colorPrimary: "#131315",
+					},
+				}}
+			>
+				<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-black`}>
+					{children}
+					<ToastContainer
+						position='top-center'
+						autoClose={4000}
+						limit={1}
+						hideProgressBar={false}
+						newestOnTop={false}
+						closeOnClick={false}
+						rtl={false}
+						pauseOnFocusLoss={false}
+						draggable={false}
+						pauseOnHover
+						theme='dark'
+						transition={Slide}
+					/>
+				</body>
+			</ClerkProvider>
 		</html>
 	);
 }

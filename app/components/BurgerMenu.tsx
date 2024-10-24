@@ -19,8 +19,8 @@ import {
 } from "@/components/ui/sheet";
 
 /* image */
-import burger from "../../../store/icons/menu.png";
-import video from "../../../store/icons/video.png";
+import burger from "../../store/icons/menu.png";
+import video from "../../store/icons/video.png";
 
 export default function BurgerMenu() {
 	const pathname = usePathname();
@@ -30,7 +30,9 @@ export default function BurgerMenu() {
 
 			<Sheet>
 				<SheetTrigger>
-					<Image src={burger} alt='logo' width={22} height={22} className='cursor-pointer' />
+					<div className='border border-neutral-800 rounded-lg p-2'>
+						<Image src={burger} alt='logo' width={22} height={22} className='cursor-pointer' />
+					</div>
 				</SheetTrigger>
 				<SheetContent side='left' className='bg-black border-neutral-900 w-[18rem] py-10'>
 					<SheetHeader className='flex flex-col gap-5'>
@@ -56,7 +58,7 @@ export default function BurgerMenu() {
 											pathname == link.route || pathname.startsWith(`${link.route}/`);
 
 										return (
-											<SheetClose asChild>
+											<SheetClose asChild key={link.route}>
 												<Link
 													href={link.route}
 													key={link.label}

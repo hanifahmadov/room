@@ -1,5 +1,5 @@
+import StreamVideoProvider from "@/providers/StreamClientProvider";
 import React, { useEffect } from "react";
-
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
@@ -13,7 +13,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 							flex flex-col justify-center items-center
 							'
 			>
-				{children}
+				<StreamVideoProvider>{children}</StreamVideoProvider>
 			</div>
 		</div>
 	);

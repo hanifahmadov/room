@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
+import { SignedIn, UserButton } from "@clerk/nextjs";
+
 /* image */
-import video from "../../../store/icons/video.png";
+import video from "../../store/icons/video.png";
 import BurgerMenu from "./BurgerMenu";
 
 export default function Navbar() {
@@ -31,7 +33,9 @@ export default function Navbar() {
 
 			<div className='dummy  h-[3rem] flex-end-center flex-grow'>
 				<div>
-					<div className='flex'>Settings</div>
+					<SignedIn>
+						<UserButton />
+					</SignedIn>
 				</div>
 			</div>
 		</div>
